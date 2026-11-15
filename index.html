@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#080b13" />
+  <title>BLUE VEIL — The Hollow Oath</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="BLUE VEIL playable game"></canvas>
+    <div class="vignette"></div>
+    <header class="hud">
+      <div class="brand"><span class="sigil">✦</span><div><b>BLUE VEIL</b><small>THE HOLLOW OATH · PROTOTYPE V1</small></div></div>
+      <div class="bars">
+        <div class="bar-label">KAEL VAREN <span id="health-text">100 / 100</span></div>
+        <div class="bar health"><i id="health-fill"></i></div>
+        <div class="bar-label">VEIL ENERGY <span id="energy-text">100 / 100</span></div>
+        <div class="bar mana"><i id="energy-fill"></i></div>
+      </div>
+      <div class="objective"><small>OBJECTIVE</small><b id="objective">Break the Warden's seal</b></div>
+    </header>
+    <section class="boss-hud" id="boss-hud">
+      <div class="boss-title"><span>✧</span> VEILBOUND SENTINEL <span>✧</span></div>
+      <div class="bar boss"><i id="boss-fill"></i></div>
+    </section>
+    <div class="center-message" id="message">
+      <div class="message-kicker">CHAPTER 01 · THE SUNKEN COURT</div>
+      <h1>THE HOLLOW OATH</h1>
+      <p>A forgotten guardian. A kingdom beneath the veil.</p>
+      <button id="start-btn">ENTER THE VEIL</button>
+      <small>Move: A / D or ← / → · Jump: Space · Attack: J · Abilities: Q / E / R / F</small>
+    </div>
+    <div class="controls" id="controls">
+      <div class="move-pad">
+        <button data-hold="left" aria-label="Move left">◀</button>
+        <button data-hold="right" aria-label="Move right">▶</button>
+        <button data-press="jump" aria-label="Jump">↟</button>
+      </div>
+      <div class="action-pad">
+        <button class="attack" data-press="attack">STRIKE</button>
+        <button data-press="dash">VEIL<br>DASH</button>
+        <button data-press="chain">CHAIN</button>
+        <button data-press="burst">BURST</button>
+        <button data-press="summon">WRAITH</button>
+        <button data-press="ultimate">ECLIPSE</button>
+      </div>
+    </div>
+    <footer class="bottom-hint"><span>WASD / ARROWS · SPACE · J · Q · E · R · F</span><span>ESC · PAUSE</span></footer>
+    <div id="toast" role="status"></div>
+  </main>
+  <script src="./src/game.js"></script>
+</body>
+</html>
